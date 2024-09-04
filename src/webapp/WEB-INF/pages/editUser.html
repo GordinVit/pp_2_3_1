@@ -25,7 +25,7 @@
       padding: 20px;
       border-radius: 8px;
     }
-    .form-group {
+    .form-group, .button-container {
       margin-bottom: 15px;
     }
     label {
@@ -55,34 +55,25 @@
     button:hover {
       background-color: #45a049;
     }
-    .button-container {
-      text-align: center;
-      margin: 20px 0;
-    }
   </style>
 </head>
 <body>
 <h1>Редактировать пользователя</h1>
 <div class="container">
   <form th:action="@{/updateUser}" th:object="${user}" method="post">
-    <!-- Скрытое поле для id пользователя -->
     <input type="hidden" th:field="*{id}" />
-
     <div class="form-group">
       <label for="firstName">Имя:</label>
-      <input type="text" id="firstName" th:field="*{firstName}" placeholder="Введите имя" required>
+      <input type="text" id="firstName" th:field="*{firstName}" placeholder="Введите имя" required />
     </div>
-
     <div class="form-group">
       <label for="lastName">Фамилия:</label>
-      <input type="text" id="lastName" th:field="*{lastName}" placeholder="Введите фамилию" required>
+      <input type="text" id="lastName" th:field="*{lastName}" placeholder="Введите фамилию" required />
     </div>
-
     <div class="form-group">
       <label for="email">Email:</label>
-      <input type="email" id="email" th:field="*{email}" placeholder="Введите email" required>
+      <input type="email" id="email" th:field="*{email}" placeholder="Введите email" required />
     </div>
-
     <div class="button-container">
       <button type="submit">Сохранить</button>
     </div>
