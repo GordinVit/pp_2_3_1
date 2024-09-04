@@ -40,7 +40,7 @@ public class UserController {
   @GetMapping("/addUser")
   public String showAddUserForm(Model model) {
     model.addAttribute("user", new User());
-    return "addUser";  // Название HTML-страницы для добавления пользователя
+    return "addUser";
   }
 
   @PostMapping("/addUser")
